@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="main-header">
-        <h1>Hello World!</h1>
+        <h1>#411 JavaScript: Lomakkeen validointi</h1>
     </header>
-    <form action="">
+    <form>
 
-        <label for="kayttajaID">Käyttäjä ID: </label>
+        <label id="kayttajaID" for="kayttajaID">Käyttäjä ID: </label>
         <input type="text" id="kayttajaID" name="kayttajaID" value=""><br>
 
-        <label for="salasana">Salasana: </label>
+        <label id="salasana" for="salasana">Salasana: </label>
         <input type="text" id="salasana" name="salasana" value=""><br>
 
-        <label for="nimi">Nimi: </label>
+        <label id="nimi"for="nimi">Nimi: </label>
         <input type="text" id="nimi" name="nimi" value=""><br>
 
-        <label for="osoite">Osoite: </label>
+        <label id="osoite"for="osoite">Osoite: </label>
         <input type="text" id="osoite" name="osoite" value=""><br>
 
-        <label for="maa">Maa: </label>
+        <label id="maa"for="maa">Maa: </label>
         <select name="maa" id="maa">
             <option value="">(Valitse maa)</option>
             <option value="fi">Suomi</option>
@@ -32,14 +33,37 @@
             <option value="ru">Venäjä</option>
         </select><br>
 
-        <label for="postiNumero">Postinumero: </label>
+        <label id="postiNumero"for="postiNumero">Postinumero: </label>
         <input type="text" id="postiNumero" name="postiNumero" value=""><br>
 
-        <label for="sahkoPosti">Sähköposti:  </label>
+        <label id="sahkoPosti"for="sahkoPosti">Sähköposti:  </label>
         <input type="text" id="sahkoPosti" name="sahkoPosti" value=""><br>
 
-        <label for="sukuPuoli">Sukupuoli: </label>
-        <input type="radio" id="sukuPuoli" name="sukuPuoli" value=""><br>
+
+
+        <label id ="sukuPuoli"for="sukuPuoli2">Sukupuoli: </label>
+        <input type="radio" name="sukuPuoli1">
+        <label id ="sukuPuoli"for="sukuPuoli1">Mies </label>
+
+        <input type="radio" name="sukuPuoli2">
+        <label id ="sukuPuoli"for="sukuPuoli1">Nainen </label><br>
+
+
+        <label id="kieli"for="kieli">Kieli: </label>
+        <input type="checkbox" name="suomi">
+        <label id="kieli"for="suomi">Suomi</label>
+        <input type="checkbox" name="muu">
+        <label id="kieli"for="suomi">Muu kuin suomi</label><br>
+
+        <input id="laheta"type="submit" name="Lähetä">
+        <label id="kieli"for="laheta"></label>
     </form>
+
+
+    <footer>
+        &copy;Jussi Varonen 2026 <br>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
