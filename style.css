@@ -2,16 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Caacupe+One&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Knewave&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oi&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Rubik+Spray+Paint&display=swap');
 body {
     font-family: "Quicksand", sans-serif;
-    max-height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to right, rgb(250, 46, 39),rgb(250, 143, 20));
+    background-image: linear-gradient(to right, rgb(28, 54, 139),rgb(84, 21, 126));
 }
 
 header {
     border-style: solid;
     border-radius: 20px;
-    background-color: rgba(109, 55, 42, 0.603);
+    background-color: rgba(117, 58, 172, 0.473);
+    box-shadow: 0 1px 5px white;
+    border-color: rgba(255, 255, 255, 0.308);
+    text-align: center;
 }
 
 header h1 {
@@ -21,98 +24,102 @@ header h1 {
 }
 
 form {
-    margin-top: 20px;
+    margin-top: 100px;
     font-size: 1.4em;
     color:white;
     margin-left: 20px;
     font-family: "Quicksand", sans-serif;
+    font-weight: 600;
     background-color: rgba(109, 55, 42, 0.295);
-    margin-right: 1200px;
+    margin:100px auto 0;
+    padding: 20px;
     border-radius: 15px;
+    width: 550px;
 }
 
-input {
+input[type="text"] {
     border-style: solid;
     border-radius: 20px;
-    border-color: rgb(243, 117, 33);
-    background-image: linear-gradient(to right, rgba(240, 127, 123, 0.562),rgba(243, 191, 132, 0.733));
+    border-color: white;
+    background-image: linear-gradient(to right, rgba(98, 164, 175, 0.562),rgba(179, 107, 226, 0.733));
     padding: 10px;
+    box-shadow: 0 0.5px 7px white;
 }
+
 
 select {
     border-style: solid;
     border-radius: 20px;
-    border-color: rgb(243, 117, 33);
-    background-image: linear-gradient(to right, rgba(240, 127, 123, 0.562),rgba(243, 191, 132, 0.733));
+    border-color: white;
+    box-shadow: 0 0.5px 7px white;
+    background-image: linear-gradient(to right, rgba(98, 164, 175, 0.562),rgba(179, 107, 226, 0.733));
     padding: 10px;
     width: auto;
     color:black;
-    font-weight: bold;
+    font-weight: bolder;
     margin-left: 20px;
 }
 
 #kayttajaID {
-    text-decoration: underline;
     margin-left: 20px;
     margin-top: 15px;
 }
 
 #salasana {
-    text-decoration: underline;
+
     margin-top: 15px;
     margin-left: 20px;
 }
 
 #nimi {
-    text-decoration: underline;
+
     margin-top: 15px;
     margin-left: 20px;
 }
 
 #osoite {
-    text-decoration: underline;
+
     margin-top: 15px;
     margin-left: 20px;
 }
 
 #maa {
-    text-decoration: underline;
+
     margin-top: 15px;
     margin-left: 20px;
 }
 
 #postiNumero {
-    text-decoration: underline;
+
     margin-top: 15px;
     margin-left: 20px;
 }
 
 #sahkoPosti {
-    text-decoration: underline;
+
     margin-top: 15px;
     margin-left: 20px;
 }
 
-#sukuPuoli {
-    margin-top: 15px;
-    margin-left: 20px;
-}
+
 
 #kieli {
-    margin-top: 15px;
-    margin-left: 20px;
+    margin: 0;
+    padding: 20px;
+
 }
 
 #laheta {
     font-family: "Quicksand", sans-serif;
-    margin-left: 20px;
-    margin-top: 15px;
+    margin-left: 190px;
+    margin-top: 30px;
     margin-bottom: 20px;
     padding: auto;
-    width: 100px;
-    font-weight: bold;
+    width: 150px;
+    font-weight: bolder;
     font-size: 1em;
     transition: 0.5s;
+    color:black;
 }
 
 #laheta:hover {
@@ -122,8 +129,11 @@ select {
 }
 
 footer {
-    height: auto;
+    margin-top: auto;
     text-align: center;
-    margin: auto;
     color:white;
+    border-style: solid;
+    padding: 50px;
+    background-color: rgba(117, 58, 172, 0.473);
+    border-color: rgba(128, 128, 128, 0.322);
 }

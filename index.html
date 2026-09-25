@@ -12,19 +12,19 @@
     </header>
     <form>
 
-        <label id="kayttajaID" for="kayttajaID">Käyttäjä ID: </label>
+        <label for="kayttajaID">Käyttäjä ID: </label>
         <input type="text" id="kayttajaID" name="kayttajaID" value=""><br>
 
-        <label id="salasana" for="salasana">Salasana: </label>
+        <label for="salasana">Salasana: </label>
         <input type="text" id="salasana" name="salasana" value=""><br>
 
-        <label id="nimi"for="nimi">Nimi: </label>
+        <label for="nimi">Nimi: </label>
         <input type="text" id="nimi" name="nimi" value=""><br>
 
-        <label id="osoite"for="osoite">Osoite: </label>
+        <label for="osoite">Osoite: </label>
         <input type="text" id="osoite" name="osoite" value=""><br>
 
-        <label id="maa"for="maa">Maa: </label>
+        <label for="maa">Maa: </label>
         <select name="maa" id="maa">
             <option value="">(Valitse maa)</option>
             <option value="fi">Suomi</option>
@@ -33,27 +33,32 @@
             <option value="ru">Venäjä</option>
         </select><br>
 
-        <label id="postiNumero"for="postiNumero">Postinumero: </label>
+        <label for="postiNumero">Postinumero: </label>
         <input type="text" id="postiNumero" name="postiNumero" value=""><br>
 
-        <label id="sahkoPosti"for="sahkoPosti">Sähköposti:  </label>
+        <label for="sahkoPosti">Sähköposti:  </label>
         <input type="text" id="sahkoPosti" name="sahkoPosti" value=""><br>
 
 
 
-        <label id ="sukuPuoli"for="sukuPuoli2">Sukupuoli: </label>
-        <input type="radio" name="sukuPuoli1">
-        <label id ="sukuPuoli"for="sukuPuoli1">Mies </label>
+        <label for="sukupuoli">Sukupuoli: </label>
+    <input type="radio" id="mies" name="sukupuoli" value="Mies">
+    <label for="mies">Mies</label>
 
-        <input type="radio" name="sukuPuoli2">
-        <label id ="sukuPuoli"for="sukuPuoli1">Nainen </label><br>
+    <input type="radio" id="nainen" name="sukupuoli" value="Nainen">
+    <label for="nainen">Nainen</label>
 
+        <br>
 
-        <label id="kieli"for="kieli">Kieli: </label>
-        <input type="checkbox" name="suomi">
-        <label id="kieli"for="suomi">Suomi</label>
-        <input type="checkbox" name="muu">
-        <label id="kieli"for="suomi">Muu kuin suomi</label><br>
+        <label>Kieli: </label>
+
+        <input type="checkbox" id="suomi" name="suomi">
+        <label for="suomi">Suomi</label>
+
+        <input type="checkbox" id="muu" name="muu">
+        <label for="muu">Muu kuin suomi</label>
+
+        <br>
 
         <input id="laheta"type="submit" name="Lähetä">
         <label id="kieli"for="laheta"></label>
