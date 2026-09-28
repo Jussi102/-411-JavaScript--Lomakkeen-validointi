@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caacupe+One&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Knewave&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oi&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Rubik+Spray+Paint&display=swap');
 body {
     font-family: "Quicksand", sans-serif;
+    margin: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -15,6 +16,7 @@ header {
     box-shadow: 0 1px 5px white;
     border-color: rgba(255, 255, 255, 0.308);
     text-align: center;
+    font-size: 0.9em;
 }
 
 header h1 {
@@ -24,13 +26,13 @@ header h1 {
 }
 
 form {
-    font-size: 1.4em;
+    transform: scale(0.9);
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.308);
+    font-size: 1.3em;
     color:white;
-    margin-left: 20px;
-    font-family: "Quicksand", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     background-color: rgba(109, 55, 42, 0.295);
-    margin-bottom: 100px;
     margin:50px auto 0;
     padding: 30px;
     border-radius: 15px;
@@ -56,7 +58,6 @@ select {
     padding: 10px;
     width: auto;
     color:black;
-    font-weight: bolder;
     margin-left: 20px;
 }
 
@@ -123,34 +124,47 @@ select {
 }
 
 #laheta:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 0.5s;
     cursor: grab;
 }
 
+
+/*Lisätietoja - kentän se tekstipalikka.*/
+#lisatiedot {
+    margin-top: 5px;
+    border: 1px solid rgb(65, 21, 95);
+    box-shadow: 0 0.5px 7px rgb(105, 80, 216);
+    padding: 80px;
+}
+
 .lisatiedot {
+    text-align: left;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     color:black;
     background-image: linear-gradient(to right, rgb(21, 41, 105),rgb(70, 18, 105));
     box-shadow: 0 0.5px 7px rgb(105, 80, 216);
-    padding: 40px;
+    padding: 50px;
+    padding-top:10px;
+    padding-bottom: 20px;
 }
 
 .lisatiedot label {
-    margin-bottom: 10px;
+    text-decoration: underline;
     font-family: "Quicksand", sans-serif;
     color:white;
     padding: 5px;
 }
 
 footer {
+    font-size: 0.9em;
     margin-top: auto;
     text-align: center;
     color:white;
     border-style: solid;
-    padding: 50px;
+    padding: 40px;
     background-color: rgba(117, 58, 172, 0.473);
     border-color: rgba(128, 128, 128, 0.322);
 }

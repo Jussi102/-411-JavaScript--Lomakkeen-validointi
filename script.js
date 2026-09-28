@@ -38,7 +38,7 @@
 
 
     if (ID.length < 6) {
-        console.log("KäyttäjäID:n tulee olla yli 6 merkkiä pitkä")
+        console.log("KäyttäjäID:n tulee olla vähintään 6 merkkiä pitkä")
     }
 
     if (salasana.length < 6) {
