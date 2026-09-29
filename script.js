@@ -1,8 +1,6 @@
+document.getElementById("laheta").addEventListener("click", function(event) {
+    event.preventDefault();
 
-
-
-    document.getElementById("laheta").addEventListener("click", function(event) {
-        event.preventDefault();
     let ID = document.getElementById("kayttajaID").value;
     let salasana = document.getElementById("salasana").value;
     let nimi = document.getElementById("nimi").value;
@@ -13,12 +11,13 @@
     let sukuPuoli = document.querySelector('input[name="sukupuoli"]:checked')?.value || "";
     let lisaTiedot = document.getElementById("lisatiedot").value;
 
-    let kieli = document.querySelector('input[name="suomi"]').checked
+    let piste = 0;
+
+    let kieli = document.querySelector('input[name="suomi"]:checked')
         ? "Suomi"
-        : document.querySelector('input[name="muu"]').checked
+        : document.querySelector('input[name="muu"]:checked')
         ? "Muu kuin suomi"
         : "";
-
 
     const kayttaja = {
         kayttajaID: ID,
@@ -31,21 +30,8 @@
         sukuPuoli: sukuPuoli,
         kieli: kieli,
         lisaTiedot: lisaTiedot
-    }
+    };
 
-
-// if-lausekkeet..
-
-
-    if (ID.length < 6) {
-        console.log("KäyttäjäID:n tulee olla vähintään 6 merkkiä pitkä")
-    }
-
-    if (salasana.length < 6) {
-        console.log("Salasanan tulee olla yli 6 merkkiä pitkä.");
-        return;
-    }   
-    
     let erikoismerkit = "!@£$€%#";
     let loytyi = false;
     let kirjainLoyto = false;
@@ -53,7 +39,6 @@
     let numerot = "0123456789";
     let numeroLoyto = false;
 
-    //for loopit
 
     for (let i = 0; i < erikoismerkit.length; i++) {
         if (salasana.includes(erikoismerkit[i])) {
@@ -61,44 +46,124 @@
         }
     }
 
+
     for (let i = 0; i < alkuKirjain.length; i++) {
         if (salasana.includes(alkuKirjain[i])) {
             kirjainLoyto = true;
         }
     }
 
+    // Numero
     for (let i = 0; i < numerot.length; i++) {
         if (salasana.includes(numerot[i])) {
             numeroLoyto = true;
         }
     }
 
-    // if lausekkeet...
+
+
+    if (ID.length < 6) {
+        document.querySelector(".vaarin p").innerHTML =
+            "KäyttäjäID:n on oltava vähintään<br>6 merkkiä pitkä".toUpperCase();
+    } else {
+        piste++;
+    }
+
+    if (salasana.length < 6) {
+        document.querySelector(".vaarin p").innerHTML =
+            "Salasanan tulee olla vähintään<br>6 merkkiä pitkä".toUpperCase();
+    } else {
+        piste++;
+    }
 
     if (!loytyi) {
-        console.log("Salasanassa tulee olla vähintään yksi erikoismerkki.");
+        document.querySelector(".vaarin p").innerHTML =
+            "Salasanassa pitää olla<br>vähintään yksi erikoismerkki".toUpperCase();
+    } else {
+        piste++;
     }
 
     if (!kirjainLoyto) {
-        console.log("Salasanassa tulee olla iso kirjain!");
+        document.querySelector(".vaarin p").innerHTML =
+            "Salasanassa pitää olla<br>iso kirjain".toUpperCase();
+    } else {
+        piste++;
     }
 
     if (!numeroLoyto) {
-        console.log("Salasanassa tulee olla iso numero");
+        document.querySelector(".vaarin p").innerHTML =
+            "Salasanassa pitää olla<br>yksi numero".toUpperCase();
+    } else {
+        piste++;
     }
 
-    if (postiNumero.length < 5) {
-        console.log("Postinumerossa tulee olla 5 numeroa.")
+    if (postiNumero.length !== 5 || isNaN(postiNumero)) {
+        document.querySelector(".vaarin p").innerHTML =
+            "Postinumerossa pitää olla<br>5 numeroa".toUpperCase();
+    } else {
+        piste++;
     }
 
     if (!sahkoPosti.includes("@") || !sahkoPosti.includes(".")) {
-    console.log("Sähköposti tulee sisältää merkit @ ja .");
-} else {
-    console.log(kayttaja);
+        document.querySelector(".vaarin p").innerHTML =
+            "Sähköpostin pitää sisältää<br>merkit @ ja .".toUpperCase();
+    } else {
+        piste++;
+    }
+
+
+    if (ID === "") {
+    document.querySelector(".vaarin p").innerHTML = "KäyttäjäID on pakollinen";
+    return;
 }
 
-    });
+    if (salasana === "") {
+        document.querySelector(".vaarin p").innerHTML = "Salasana on pakollinen";
+        return;
+    }
 
+    if (nimi === "") {
+        document.querySelector(".vaarin p").innerHTML = "Nimi on pakollinen";
+        return;
+    }
 
+    if (osoite === "") {
+        document.querySelector(".vaarin p").innerHTML = "Osoite on pakollinen";
+        return;
+    }
 
+    if (maa === "") {
+        document.querySelector(".vaarin p").innerHTML = "Valitse maa";
+        return;
+    }
 
+    if (postiNumero === "") {
+        document.querySelector(".vaarin p").innerHTML = "Postinumero on pakollinen";
+        return;
+    }
+
+    if (sahkoPosti === "") {
+        document.querySelector(".vaarin p").innerHTML = "Sähköposti on pakollinen";
+        return;
+    }
+    if (sukuPuoli === "") {
+    document.querySelector(".vaarin p").innerHTML =
+        "Valitse sukupuoli";
+    return;
+    }
+
+    if (kieli === "") {
+        document.querySelector(".vaarin p").innerHTML =
+            "Valitse kieli";
+        return;
+    }
+
+    if (piste === 7) {
+        document.querySelector(".vaarin p").innerHTML = "";
+        document.querySelector(".vaarin h1").innerHTML = "Tiedot <br> TALLENNETTU..";
+
+        console.log(kayttaja);
+
+        document.querySelector("form").reset();
+    }
+});

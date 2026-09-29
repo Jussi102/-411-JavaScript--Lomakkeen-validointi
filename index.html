@@ -3,59 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lomakkeen validointi - Jussi Varonen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="main-header">
         <h1>#411 JavaScript: Lomakkeen validointi</h1>
     </header>
+
     <form>
+  
+        <div class="vaarin">
+            <p></p>
+            <h1></h1>
+        </div>
+        <div class="kayttajaID">
+                  <p><b>Siirry kentästä toiseen tab-näppäimellä</b></p>
+            <label for="kayttajaID">Käyttäjä ID: </label>
+            <input type="text" id="kayttajaID" name="kayttajaID" value=""><br>
+        </div>
 
-        <label for="kayttajaID">Käyttäjä ID: </label>
-        <input type="text" id="kayttajaID" name="kayttajaID" value=""><br>
 
-        <label for="salasana">Salasana: </label>
-        <input type="text" id="salasana" name="salasana" value=""><br>
+        <div class="salasana">
+            <label for="salasana">Salasana: </label>
+            <input type="text" id="salasana" name="salasana" value=""><br>
+        </div>
 
-        <label for="nimi">Nimi: </label>
-        <input type="text" id="nimi" name="nimi" value=""><br>
+        <div class="nimi">
+            <label for="nimi">Nimi: </label>
+            <input type="text" id="nimi" name="nimi" value=""><br>
+        </div>
 
-        <label for="osoite">Osoite: </label>
-        <input type="text" id="osoite" name="osoite" value=""><br>
+        <div class="osoite">
+            <label for="osoite">Osoite: </label>
+            <input type="text" id="osoite" name="osoite" value=""><br>
+        </div>
+        
 
-        <label for="maa">Maa: </label>
-        <select name="maa" id="maa">
+        <div class="maa">
+            <label for="maa">Maa: </label>
+            <select name="maa" id="maa">
             <option value="">(Valitse maa)</option>
             <option value="fi">Suomi</option>
             <option value="en">Englanti</option>
             <option value="se">Ruotsi</option>
             <option value="ru">Venäjä</option>
         </select><br>
+        </div>
 
-        <label for="postiNumero">Postinumero: </label>
-        <input type="text" id="postiNumero" name="postiNumero" value=""><br>
 
-        <label for="sahkoPosti">Sähköposti:  </label>
-        <input type="text" id="sahkoPosti" name="sahkoPosti" value=""><br>
+        <div class="postiNumero">
+            <label for="postiNumero">Postinumero: </label>
+            <input type="text" id="postiNumero" name="postiNumero" value=""><br>
+        </div>
+
+        <div class="sahkoPosti">
+            <label for="sahkoPosti">Sähköposti:  </label>
+            <input type="text" id="sahkoPosti" name="sahkoPosti" value=""><br>
+        </div>
+        
 
 
         <br>
-        <label for="sukupuoli">Sukupuoli: </label>
-    <input type="radio" id="mies" name="sukupuoli" value="Mies">
-    <label for="mies">Mies</label>
 
-    <input type="radio" id="nainen" name="sukupuoli" value="Nainen">
-    <label for="nainen">Nainen</label>
+        <div class="sukuPuoli">
+            <label for="sukupuoli">Sukupuoli: </label>
+            <input type="radio" id="mies" name="sukupuoli" value="Mies">
+            <label for="mies">Mies</label>
+
+            <input type="radio" id="nainen" name="sukupuoli" value="Nainen">
+            <label for="nainen">Nainen</label>
+        </div>
 
         <br>
-        <label>Kieli: </label>
 
-        <input type="checkbox" id="suomi" name="suomi">
-        <label for="suomi">Suomi</label>
 
-        <input type="checkbox" id="muu" name="muu">
-        <label for="muu">Muu kuin suomi</label>
+        <div class="kieli">
+            <label>Kieli: </label>
+
+            <input type="checkbox" id="suomi" name="suomi">
+            <label for="suomi">Suomi</label>
+
+            <input type="checkbox" id="muu" name="muu">
+            <label for="muu">Muu kuin suomi</label>
+        </div>
 
         <br>
         <br>
@@ -66,9 +97,10 @@
         </div>
 
 
-        <input id="laheta"type="submit" name="Lähetä">
-        <label id="kieli"for="laheta"></label>
-
+        <div class="laheta">
+            <input id="laheta"type="submit" name="Lähetä">
+            <label id="kieli"for="laheta"></label>
+        </div>
 
 
     </form>
